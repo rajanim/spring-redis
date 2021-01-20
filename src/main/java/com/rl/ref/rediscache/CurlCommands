@@ -1,0 +1,7 @@
+curl -i http://localhost:8080/users/2
+
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
+  "id": "1",
+  "name": "mary lan",
+  "status": 0
+}' 'http://localhost:8080/users'

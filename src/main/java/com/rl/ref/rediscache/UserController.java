@@ -17,6 +17,11 @@ public class UserController {
         return userRepository.save(user);
     }
 
+    @GetMapping("/all")
+    public Iterable<User> findAll() {
+        return userRepository.findAll();
+    }
+
     @GetMapping("/{id}")
     public User findById(@PathVariable("id") Long id) {
         Optional<User> optCustomer = userRepository.findById(id.toString());
@@ -26,10 +31,10 @@ public class UserController {
             return null;
     }
 
-    @GetMapping("user/{name}")
+/*    @GetMapping("user/{name}")
     public User findByName(@PathVariable("name") String name) {
-        //Todo
+        //Todo fix this with user name
         User optCustomer = userRepository.findById((name)).get();
       return optCustomer;
-    }
+    }*/
 }

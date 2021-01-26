@@ -5,3 +5,10 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
   "name": "mary lan",
   "status": 0
 }' 'http://localhost:8080/users'
+
+
+curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
+  "id": "2",
+  "name": "John Koe",
+  "status": 1
+}' 'http://localhost:8080/update'
